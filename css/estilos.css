@@ -1,0 +1,223 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+/*-------------------------Variables--------------------*/
+
+:root{
+    /*todo lo declarado aquí estara accesible para las demas clases*/
+    --green-color:#7ACC2D;
+    --white-coor:white;
+    --black-color:#313337;
+    /*Tipografía*/
+    --normal:12px;
+    /*Espaciado*/
+    --space:10px;
+    /*Box shadow*/
+    --box:0px 0 2px 1px #e6e5e9;
+}
+
+/*-------------------------Variables--------------------*/
+
+
+html, body{
+    padding: 0px;
+    margin: 0px;
+    font-size: var(--normal);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ----------------------------Nav Bar----------------------------------------- */
+nav{
+    display: flex;
+    background-color: var(--green-color);
+    padding: var(--space);
+    color: var(--white-coor);
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li{
+    padding-left: 20px;
+    list-style: none;
+}
+
+nav li a{
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+nav li a:hover{
+    color: var(--white-coor);
+}
+
+/* ----------------------------Main section ----------------------------------------- */
+
+.main_section {
+    padding: 10%;
+    text-align: center;
+   
+}
+
+/* 
+    para agregar la curva en el main section no se agrega en el html, creamos 
+    otra section llamada product y ahi modificamos lo necesario
+*/
+
+/*
+continua elaboración del card para agregar imagen
+vamos a disminuir un poco la altura del elemento padre que es product
+los card aún no sobresalen cambiamos el height a 50px para ver como baja
+luego agregamos la imagen
+*/
+.products {
+    /* debemos ingresar la url para eso colocamos ../*/
+    background-image: url("../images/curve.png");
+    height: 20px; /* aui manipulamos la altura, despues lo cambia a max-height: ;*/
+    background-size: cover; /*significa que ocupe el tamoño del div que tiene*/
+    background-position: center top; /* alineate hacia el centro pero hacia arriba*/
+    /*padding: 20px; /*para poder ver la división de los elementos esto lo agregamos al agregar el padding de .product*/
+    padding: 20%; /* si le subimos al padding se hacen mas pequeños y se organizan mas al centro los card*/
+    display: flex;
+    justify-content: center;
+}
+
+.product {
+    padding: var(--space);
+    /*para poder subir los card product modificamos la propiedad margin originalmente tenia 160*/
+    margin-top: -280px;
+}
+
+.product .content{
+    background-color: var(--white-coor);
+    /*modificamos el pading de 20 a 15 para que no se haga muy grande el contenido*/
+    padding: 20px;
+    /*box shadow para remarcar el car*/
+    box-shadow: var(--box);
+}
+
+.img_content {
+    text-align: center;
+}
+
+.main_button{
+    background-color: var(--green-color);
+    /*le damos un width de 100% para que ocuple todoo el espacio de la card*/
+    width: 100%;
+    padding: var(--space);
+    font-size: var(--normal); /*17px;*/
+    color: var(--white-coor);
+    border: 0;
+    /*para mostrar el cambio del cursor*/
+    cursor: pointer;
+    /*cambiar el radio del boton*/
+    border-radius: 3px;
+}
+
+.main_button:hover {
+    background-color: #5e9222;
+}
+
+
+
+.middle {
+    padding: 5%;
+}
+
+.middle h1{
+    text-align: center;
+}
+
+
+.products2 {
+    /* debemos ingresar la url para eso colocamos ../*/
+    /*height: 20px; /* aui manipulamos la altura, despues lo cambia a max-height: ;*/
+    background-size: cover; /*significa que ocupe el tamoño del div que tiene*/
+    background-position: center top; /* alineate hacia el centro pero hacia arriba*/
+    /*padding: 20px; /*para poder ver la división de los elementos esto lo agregamos al agregar el padding de .product*/
+    padding: 10%; /* si le subimos al padding se hacen mas pequeños y se organizan mas al centro los card*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.product2 {
+    padding: var(--space);
+    /*para poder subir los card product modificamos la propiedad margin originalmente tenia 160*/
+    /*margin-top: -230px;*/
+}
+
+.product2 .content{
+    background-color: var(--white-coor);
+    /*modificamos el pading de 20 a 15 para que no se haga muy grande el contenido*/
+    padding: 20px;
+    /*box shadow para remarcar el car*/
+    /*box-shadow: var(--box);*/
+    text-align: center;
+}
+
+.img_content2 {
+    text-align: center;
+}
+
+
+
+
+
+.centered {
+    padding: 5%;
+}
+
+.centered h1{
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+ 
+ .card {
+    flex: 0 1 calc(25% - 1em);
+    box-shadow: var(--box)
+}
+
+.card {
+	background: white;
+	margin-bottom: 2em;	
+}
+
+.card a {
+	color: black;
+	text-decoration: none;
+}
+
+.card a:hover {
+	box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+	padding: 1.4em;
+}
+
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: bold;
+}
+
+.card-content p {
+	font-size: 80%;
+}
+
+.centered img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+
